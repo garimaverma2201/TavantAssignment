@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="5dp"
+    android:elevation="10dp"
+    android:layout_margin="5dp"
+    android:padding="10dp"
+    app:cardBackgroundColor="#ffffff"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/productImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="7dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/productTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Product Title"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:textColor="#000000" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/productPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="5500"
+                android:layout_marginTop="2dp"
+                android:textSize="18sp"
+                android:textColor="#C52020" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rating="3.5"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:progressTint="#FF0E0E"
+                    android:layout_marginTop="5dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ratingCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="(5)"
+                    android:layout_marginTop="2dp"
+                    android:textSize="15sp"
+                    android:textColor="#C52020" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
