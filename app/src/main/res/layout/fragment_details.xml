@@ -7,17 +7,6 @@
     android:background="@color/white"
     tools:context=".fragment.DetailsFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/productName"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#0923B3"
-        app:title="Product Description"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
@@ -25,7 +14,7 @@
         app:layout_constraintDimensionRatio="16:7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productName"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -107,8 +96,17 @@
             android:layout_marginTop="5dp"
             android:textColor="#000"
             />
-    </LinearLayout>
 
+        <Button
+            android:id="@+id/addToFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add To Favourite"
+            android:layout_marginTop="10dp"
+            android:background="#0866B1"
+            android:padding="10dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 
 
 

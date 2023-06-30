@@ -1,19 +1,21 @@
 package com.app.tanvant.adapter
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
 import com.app.tanvant.databinding.ProductListLayoutAdapterBinding
 import com.app.tanvant.fragment.HomeFragmentDirections
 import com.app.tanvant.model.ProductResponse
+import com.app.tanvant.viewmodel.ProductDbViewModel
 
-class ProductListAdapter : RecyclerView.Adapter<ProductListAdapter.ProductListViewHolder>() {
+class ProductListAdapter() : RecyclerView.Adapter<ProductListAdapter.ProductListViewHolder>() {
+    
 
     inner class ProductListViewHolder(val binding : ProductListLayoutAdapterBinding) :
             RecyclerView.ViewHolder(binding.root)
@@ -60,8 +62,9 @@ class ProductListAdapter : RecyclerView.Adapter<ProductListAdapter.ProductListVi
             ratingCount.text = "(${product.rating.count.toString()})"
         }
 
+
         holder.itemView.setOnClickListener{mView->
-            val direction = HomeFragmentDirections.actionHomeFragmentToDetailsFragment2(product)
+            val direction = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(product)
             mView.findNavController().navigate(direction)
         }
     }
